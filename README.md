@@ -1,0 +1,2 @@
+# eFaturaSorgu
+Java dili kullanılarak oluşturulan bu E-Fatura Sorgu projesi ile Android işletim sisteminde çalışmak üzere, girilen vergi numarasının E-Fatura mükellefi olup olmadığının öğrenilmesi ve eğer E-Fatura mükellefi ise bilgilerin görüntülenmesi amaçlanmaktadır. http://www.efatura.kim/ web sitesinin mobile uyarlanmış halidir. IDE olarak Android Studio kullanılmıştır. Web Servise erişim KSOAP2 ile gerçekleşmiştir.
