@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ustLay"
+        android:layout_width="match_parent"
+        android:layout_height="570dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/sonlogo"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/girilecekId"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edittextxml"
+            android:ems="10"
+            android:hint=" Vergi numarası giriniz..."
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingLeft="10dp"
+            android:textColorLink="@android:color/darker_gray"
+            android:textCursorDrawable="@color/lightGrey"
+            android:textSelectHandle="@android:drawable/arrow_up_float" />
+
+
+        <Button
+            android:id="@+id/sorguButtonId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/buttonxml"
+            android:text="SORGULA"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/bulunamadiId"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/bulunamadishape"
+            android:paddingLeft="2dp"
+            android:textColor="#383737"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:visibility="gone" />
+
+        <TableLayout
+            android:id="@+id/idTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/layoutshape"
+            android:visibility="gone">
+
+            <TableRow
+                android:id="@+id/baslikTableId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/baslikId"
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/basliktop"
+                    android:gravity="center"
+                    android:text="e-Fatura Mükellefi"
+                    android:textColor="#383737"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowVknid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/vknTId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:background="#fdfbf6"
+                    android:text=" Vergi Kimlik No"
+                    android:textColor="#383737"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/vknNoId"
+                    android:layout_width="171dp"
+                    android:layout_height="24dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="10"
+                    android:background="#fdfbf6"
+                    android:paddingLeft="2dp"
+                    android:textColor="#383737"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowMtid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/mtTId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:background="#fdfbf6"
+                    android:text=" Müşteri Tipi"
+                    android:textColor="#383737"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/mtId"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="10"
+                    android:background="#fdfbf6"
+                    android:paddingLeft="2dp"
+                    android:textColor="#383737"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowUnvan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/unvanTId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="57dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:background="#fdfbf6"
+                    android:text=" Ünvan"
+                    android:textColor="#383737"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/unvanId"
+                    android:layout_width="match_parent"
+                    android:layout_height="57dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="10"
+                    android:background="#fdfbf6"
+                    android:paddingLeft="2dp"
+                    android:textColor="#383737"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowDtid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/dtTId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:background="#fdfbf6"
+                    android:text=" Durum Tipi"
+                    android:textColor="#383737"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/dtId"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="10"
+                    android:background="#fdfbf6"
+                    android:paddingLeft="2dp"
+                    android:textColor="#383737"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowMstid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/mstTId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:background="#fdfbf6"
+                    android:text=" Müşteri Seçenek Tipi"
+                    android:textColor="#383737"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/mstId"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="10"
+                    android:background="#fdfbf6"
+                    android:paddingLeft="2dp"
+                    android:textColor="#383737"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowKtid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/ktTId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:background="#fdfbf6"
+                    android:text=" Kayıt Tarihi"
+                    android:textColor="#383737"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/ktId"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="10"
+                    android:background="#fdfbf6"
+                    android:paddingLeft="2dp"
+                    android:singleLine="true"
+                    android:textColor="#383737"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/rowGtid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/gtTId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bottomleft"
+                    android:text=" Güncelleme Tarihi"
+                    android:textColor="#383737"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/gtId"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="10"
+                    android:background="@drawable/bottomright"
+                    android:paddingLeft="2dp"
+                    android:singleLine="true"
+                    android:textColor="#2b2b2b"
+                    android:textSize="16sp" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/yukleniyorTId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Yükleniyor..."
+            android:textColor="#383737"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/progressBarId"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="false"
+            android:indeterminateTint="#3b3b3b"
+            android:max="10"
+            android:progress="1"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/altLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/ustLay"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:src="@drawable/ikibilisimkenarsiz" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="www.ikibilisim.com" />
+
+            <TextView
+                android:id="@+id/ipId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#525252" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

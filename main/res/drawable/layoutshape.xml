@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <solid android:color="#666464"/>  <!--  we define background colour "#666464"-->
+    <stroke android:width="2dp"  android:color="#1e1e1e"/> <!-- we define border colour and thick -->
+    <corners android:radius="4dp"/> <!-- we define corner radius. and note that radius can be different for each corner -->
+
+    <padding android:left="1dp"
+        android:right="1dp"
+        android:top="1dp"
+        android:bottom="1dp"/>
+
+</shape>
